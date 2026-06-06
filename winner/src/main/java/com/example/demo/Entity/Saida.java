@@ -2,17 +2,24 @@ package com.example.demo.Entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.UUID;
 
 import com.example.demo.Enums.Categorias;
 import com.example.demo.Enums.Tipos;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Saida {
 
-    Categorias categoria;
-    Tipos tipo;
-    String descricao;
-    BigDecimal valor;
-    LocalDate dataSaida;
+    @Id
+    private UUID id;
+    private Categorias categoria;
+    private Tipos tipo;
+    private String descricao;
+    private BigDecimal valor;
+    private LocalDate dataSaida;
     
     public Categorias getCategoria() {
         return categoria;
