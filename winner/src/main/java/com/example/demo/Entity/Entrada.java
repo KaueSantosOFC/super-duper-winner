@@ -2,14 +2,18 @@ package com.example.demo.Entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.UUID;
 
 import com.example.demo.Enums.TipoEntrada;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class Entrada {
 
+    @Id
+    private UUID id;
     private TipoEntrada tipoEntrada;
     private BigDecimal valor;
     private LocalDate dataEntrada;
